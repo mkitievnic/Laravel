@@ -1,0 +1,25 @@
+@extends('layouts.app')
+
+@section('content')
+    <section class="content-header">
+        <h1 class="pull-left">Materiales del curso {{ $curso->informacion }}</h1>
+    </section>
+    <div class="content">
+        <div class="clearfix"></div>
+        @include('flash::message')
+        @include('adminlte-templates::common.errors')
+        <div class="clearfix"></div>
+
+        <div class="box box-primary">
+            <div class="box-body">
+                @include('materials.create')
+
+                @include('materials.table')
+            </div>
+        </div>
+        <div class="text-center">
+
+        </div>
+    </div>
+@endsection
+
